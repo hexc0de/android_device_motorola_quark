@@ -97,6 +97,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     camera.apq8084
 
+# Camera configuration
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.camera.shutter.disable=1
+
 # Charger
 PRODUCT_PACKAGES += \
     charger \
