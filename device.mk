@@ -101,7 +101,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.camera.shutter.disable=1
 
-
 # Charger
 PRODUCT_PACKAGES += \
     charger \
