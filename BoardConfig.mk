@@ -94,6 +94,9 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_USE_16BYTE_GRALLOC_ALIGN := true
 
+# SurfaceFlinger init
+BOARD_USE_MOTO_SF = true
+
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
