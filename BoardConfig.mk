@@ -55,7 +55,7 @@ TARGET_KERNEL_CONFIG := quark_defconfig
 WLAN_MODULES:
 	mkdir -p $(KERNEL_MODULES_OUT)/qca_cld
 	mv $(KERNEL_MODULES_OUT)/wlan.ko $(KERNEL_MODULES_OUT)/qca_cld/qca_cld_wlan.ko
-	ln -sf /system/lib/modules/qca_cld/qca_cld_wlan.ko $(TARGET_OUT)/lib/modules/wlan.ko
+	ln -sf $(TARGET_OUT)/lib/modules/qca_cld/qca_cld_wlan.ko $(TARGET_OUT)/lib/modules/wlan.ko
 
 TARGET_KERNEL_MODULES += WLAN_MODULES
 
