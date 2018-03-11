@@ -34,7 +34,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno420
 TARGET_BOOTLOADER_BOARD_NAME := APQ8084
 TARGET_NO_BOOTLOADER := true
 
-USE_CLANG_PLATFORM_BUILD := true
+USE_CLANG_PLATFORM_BUILD := false
 
 # Architecture
 TARGET_ARCH := arm
@@ -45,7 +45,7 @@ TARGET_CPU_VARIANT := krait
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
-BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=qcom msm_rtb.filter=0x37 ehci-hcd.park=3 vmalloc=400M
+BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=qcom msm_rtb.filter=0x37 ehci-hcd.park=3 vmalloc=400M selinux=0
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DT := true
@@ -56,7 +56,7 @@ TARGET_KERNEL_CONFIG := quark_defconfig
 WLAN_MODULES:
 	mkdir -p $(KERNEL_MODULES_OUT)/qca_cld
 	mv $(KERNEL_MODULES_OUT)/wlan.ko $(KERNEL_MODULES_OUT)/qca_cld/qca_cld_wlan.ko
-	ln -sf /system/lib/modules/qca_cld/qca_cld_wlan.ko $(TARGET_OUT)/lib/modules/wlan.ko
+	ln -sf $(TARGET_OUT)/lib/modules/qca_cld/qca_cld_wlan.ko $(TARGET_OUT)/lib/modules/wlan.ko
 
 TARGET_KERNEL_MODULES += WLAN_MODULES
 
