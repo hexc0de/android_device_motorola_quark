@@ -168,9 +168,11 @@ on post-fs-data
     # Create a folder for SRS to be able to create a usercfg file
     mkdir /data/data/media 0770 media media
     
-
     # Create folder for mm-qcamera-daemon
     mkdir /data/camera 0770 media camera
+
+    # Setup folder for camera HAL subsystem
+    mkdir /data/camera_dump 0750 media media
 
     # Subsystem RAM-dumps
     mkdir /data/ss-ram-dumps 0750 radio log
